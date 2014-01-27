@@ -1,9 +1,12 @@
 LighthouseForum::Application.routes.draw do
 
-  get 'posts', to: 'posts#index'
-  get 'posts/new', to: 'posts#new'
-  get 'posts/:id', to: 'posts#show'
-  post 'posts', to: 'posts#create'
+  resources :posts
+  # get 'posts',          to: 'posts#index'
+  # get 'posts/new',      to: 'posts#new' #added in exercise 8
+  # get 'posts/:id/edit', to: 'posts#edit' #added in exercise 9
+  # get 'posts/:id',      to: 'posts#show', as: 'post' #"as: 'post' part added in exercise 9( neccessary for the update action"
+  # patch 'posts/:id',     to: 'posts#update' #added exercise 9
+  # post 'posts',         to: 'posts#create' #added in exercise 8
 
   # [tons of helpful comments]
 
